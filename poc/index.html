@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>isoBars – Proof of Concept auf der Hairline-Engine</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <h1>Daten in 3D, die auf Maus und Scroll antworten</h1>
+    <p>Proof of Concept: ein isometrisches Säulendiagramm auf der Engine von Hairline. Daten rein, Federn für jede Höhe, eine geteilte Animationsschleife.</p>
+    <p class="hint">Scrolle nach unten: erst wachsen die Säulen, dann dreht sich die Kamera. Fahre mit der Maus über das Diagramm oder nutze die Pfeiltasten.</p>
+  </header>
+
+  <section id="track">
+    <div class="sticky">
+      <div class="card">
+        <div class="bar-top">
+          <div class="group" role="group" aria-label="Kennzahl">
+            <button data-metric="sessions" aria-pressed="true">Sessions</button>
+            <button data-metric="conversions" aria-pressed="false">Conversions</button>
+            <button data-metric="revenue" aria-pressed="false">Umsatz</button>
+          </div>
+          <span id="kpi" aria-live="polite"></span>
+          <button id="theme" aria-label="Hell- oder Dunkelmodus umschalten">Theme</button>
+        </div>
+        <div id="chart"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="outro">
+    <p>Ende der Demo. Scrolle zurück, um die Animation rückwärts zu sehen.</p>
+  </div>
+  <script type="module" src="./dist/demo.js"></script>
+</body>
+</html>
